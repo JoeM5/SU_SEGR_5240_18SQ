@@ -10,6 +10,7 @@ namespace restapi.Models
     {
         public Timecard(int resource)
         {
+            Resource = resource;
             UniqueIdentifier = Guid.NewGuid();
             Identity = new TimecardIdentity();
             Lines = new List<AnnotatedTimecardLine>();
@@ -161,6 +162,42 @@ namespace restapi.Models
             var annotatedLine = new AnnotatedTimecardLine(timecardLine);
 
             Lines.Add(annotatedLine);
+
+            return annotatedLine;
+        }
+
+        public int GetLineIndex(string lineId)
+        {
+            var annotatedLine = Lines.FirstOrDefault(line => line.UniqueIdentifier.ToString() == lineId);
+
+            if (annotatedLine != null)
+            {
+                return Lines.IndexOf(annotatedLine);
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public AnnotatedTimecardLine ReplaceLine(int index, TimecardLine timecardLine)
+        {
+            var annotatedLine = new AnnotatedTimecardLine(timecardLine);
+
+            Lines[index] = annotatedLine;
+
+            return annotatedLine;
+        }
+
+        public AnnotatedTimecardLine UpdateLine(int index, int? week, int? year, DayOfWeek? day, float? hours, string project)
+        {
+            var annotatedLine = Lines[index];
+
+            annotatedLine.Week = week != null ? week.Value : annotatedLine.Week;
+            annotatedLine.Year = year != null ? year.Value : annotatedLine.Year;
+            annotatedLine.Day = day != null ? day.Value : annotatedLine.Day;
+            annotatedLine.Hours = hours != null ? hours.Value : annotatedLine.Hours;
+            annotatedLine.Project = project != null ? project : annotatedLine.Project;
 
             return annotatedLine;
         }
