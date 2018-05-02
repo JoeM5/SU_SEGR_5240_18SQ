@@ -31,9 +31,9 @@ ISBN-10: 0201362988<br/>
 
 * 04/03 - First class
 * 04/17 - Guest lecture (I'm out)
-* 05/08 - Mid-term
+* 05/15 - No class at SU - mid-term due
 * 06/05 - Design papers and presentations
-* 06/13 - Final exam
+* 06/12 - Final exam
 
 ## Tentative list of topics / schedule
 
@@ -42,13 +42,13 @@ ISBN-10: 0201362988<br/>
 * 04/17 Stephen Riley: Pattern Oriented Software Architecture
 * 04/24 What is architecture
 * 05/01 Agile software architecture
-* 05/08 Mid-term, Pragmatic programming
-* 05/15 Distributed computing and API design
+* 05/08 Distributed computing and API design
+* 05/15 No class: Mid-term – take home, design assignment
 * 05/22 TNG breakdown (design studio class)
 * 05/29 UML 2.0 overview
 * 06/05 Anti-patterns and Topics in Software Architecture
-* 06/13 Design papers due
-* 06/13 Final exam due
+* 06/13 Pragmatic programming, in-class presentation / design paper
+* 06/16 Final exam due 12:00 pm
 
 ## Grading
 
